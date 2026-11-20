@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.2`)
+## 📱 Download APK (`v1.3.3`)
 
-Go to the **[Latest Release (v1.3.2)](https://github.com/Metro-dens/MetroVpnApp/releases/tag/v1.3.2)** and pick the APK for your Android device (**Android 6.0+**):
+Go to the **[Latest Release (v1.3.3)](https://github.com/Metro-dens/MetroVpnApp/releases/tag/v1.3.3)** and pick the APK for your Android device (**Android 6.0+**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,11 +16,12 @@ Go to the **[Latest Release (v1.3.2)](https://github.com/Metro-dens/MetroVpnApp/
 
 ---
 
-## ✨ What's New in `v1.3.2`
+## ✨ What's New in `v1.3.3`
 
-- **True In-App Auto-Update & Installer:** Automatically detects new GitHub releases without stale CDN caching, selects the smallest APK for your device CPU (`arm64-v8a` / `armeabi-v7a` / `universal`), downloads inside the app with live percentage & MB progress, and launches the Android package installer directly.
-- **Settings About Tab & Telegram Links:** Added an **About** tab above **Build Version & Updates** with clickable links for **@MetroVpnPaidProof** (Channel) and **@Metrodens_bot** (Bot), plus an **Auto-Update Check** toggle.
-- **Material 3 Expressive + Slide-Right Data Quota:** Shape-morphing 12-scallop hero toggle, Hotspot Share in Settings, swipe right on server cards for Data Quota, compact QR camera + Gallery upload, and Android 6.0+ (`minSdk 23`) support.
+- **Xiaomi MIUI / HyperOS & Android 13+ Haptics Fix:** Added `FLAG_IGNORE_GLOBAL_SETTING`, `VibrationAttributes.USAGE_TOUCH` (Android 13+), and `AudioAttributes.USAGE_ASSISTANCE_SONIFICATION` (Android 8–12) plus full haptic triggers across hero toggle, Settings rows, switches, navigation bar, and server swipe cards.
+- **True In-App Auto-Update & Installer:** Automatically detects new GitHub releases, selects the right CPU APK (`arm64-v8a` / `armeabi-v7a` / `universal`), downloads in-app with live progress bar, and launches the Android installer.
+- **Settings About Tab & Telegram Links:** Expandable **About** tab above **Build Version & Updates** with direct links for **@MetroVpnPaidProof** (Channel) and **@Metrodens_bot** (Bot).
+- **Material 3 Expressive + Slide-Right Data Quota + Hotspot Share:** Shape-morphing hero toggle, Hotspot Share in Settings, swipe right on server cards for Data Quota, compact QR camera + Gallery upload, Airtel & Mobitel filters, and Android 6.0+ (`minSdk 23`) support.
 
 ---
 

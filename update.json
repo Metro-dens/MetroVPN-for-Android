@@ -1,8 +1,8 @@
 {
-  "versionCode": 6,
-  "versionName": "1.3.2",
+  "versionCode": 7,
+  "versionName": "1.3.3",
   "title": "New Update Available",
-  "message": "Added automatic in-app APK download & installer, cache-free GitHub update detection, and Settings About tab with @MetroVpnPaidProof & @Metrodens_bot.",
+  "message": "Fixed Xiaomi/HyperOS & Android 13+ tactile vibration haptics across hero button, switches, navigation bar, and server swipe cards.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVpnApp/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }
