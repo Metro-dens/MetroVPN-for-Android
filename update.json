@@ -1,8 +1,8 @@
 {
-  "versionCode": 7,
-  "versionName": "1.3.3",
+  "versionCode": 8,
+  "versionName": "1.3.4",
   "title": "New Update Available",
-  "message": "Fixed Xiaomi/HyperOS & Android 13+ tactile vibration haptics across hero button, switches, navigation bar, and server swipe cards.",
-  "downloadUrl": "https://github.com/Metro-dens/MetroVpnApp/releases/latest/download/app-universal-release.apk",
+  "message": "Fixed Data Quota syncing over active VPN tunnels and IP/VCN server nodes, plus automatic quota refresh after connecting.",
+  "downloadUrl": "https://github.com/Metro-dens/MetroVPN-for-Android/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }

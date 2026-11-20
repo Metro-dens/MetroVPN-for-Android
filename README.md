@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.3`)
+## 📱 Download APK (`v1.3.4`)
 
-Go to the **[Latest Release (v1.3.3)](https://github.com/Metro-dens/MetroVpnApp/releases/tag/v1.3.3)** and pick the APK for your Android device (**Android 6.0+**):
+Go to the **[Latest Release (v1.3.4)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.4)** and pick the APK for your Android device (**Android 6.0+**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,8 +16,10 @@ Go to the **[Latest Release (v1.3.3)](https://github.com/Metro-dens/MetroVpnApp/
 
 ---
 
-## ✨ What's New in `v1.3.3`
+## ✨ What's New in `v1.3.4`
 
+- **Data Quota Sync Fix & Auto-Refresh:** Fixed Data Quota syncing over active VPN tunnels (via proxy/direct fallback) and IP/VCN server nodes, plus automatic quota refresh right after connecting.
+- **Release Hub Migration:** Switched in-app update manifest and release download links to `Metro-dens/MetroVPN-for-Android`.
 - **Xiaomi MIUI / HyperOS & Android 13+ Haptics Fix:** Added `FLAG_IGNORE_GLOBAL_SETTING`, `VibrationAttributes.USAGE_TOUCH` (Android 13+), and `AudioAttributes.USAGE_ASSISTANCE_SONIFICATION` (Android 8–12) plus full haptic triggers across hero toggle, Settings rows, switches, navigation bar, and server swipe cards.
 - **True In-App Auto-Update & Installer:** Automatically detects new GitHub releases, selects the right CPU APK (`arm64-v8a` / `armeabi-v7a` / `universal`), downloads in-app with live progress bar, and launches the Android installer.
 - **Settings About Tab & Telegram Links:** Expandable **About** tab above **Build Version & Updates** with direct links for **@MetroVpnPaidProof** (Channel) and **@Metrodens_bot** (Bot).
