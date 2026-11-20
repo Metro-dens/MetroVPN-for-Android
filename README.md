@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.1`)
+## 📱 Download APK (`v1.3.2`)
 
-Go to the **[Latest Release (v1.3.1)](https://github.com/Metro-dens/MetroVpnApp/releases/tag/v1.3.1)** and pick the APK for your Android device (**Android 6.0+**):
+Go to the **[Latest Release (v1.3.2)](https://github.com/Metro-dens/MetroVpnApp/releases/tag/v1.3.2)** and pick the APK for your Android device (**Android 6.0+**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,12 +16,11 @@ Go to the **[Latest Release (v1.3.1)](https://github.com/Metro-dens/MetroVpnApp/
 
 ---
 
-## ✨ What's New in `v1.3.1`
+## ✨ What's New in `v1.3.2`
 
-- **Settings About Tab:** Added an **About** section directly above **Build Version & Updates** with direct Telegram links for **@MetroVpnPaidProof** (Channel) and **@Metrodens_bot** (Bot).
-- **Compact QR Camera Scanner:** Shrunk the camera preview into a centered square frame and moved **Upload QR Image from Gallery** directly below it.
-- **Slide-Right Data Quota:** Swipe right on any server card in **Servers** to inspect live Data Quota (`Used`, `Remaining`, `Total`, & `Expiry`) and sync on demand.
-- **Material 3 Expressive (Android 16/17 Pixel UI) + Hotspot Share:** Shape-morphing 12-scallop hero toggle, Hotspot Proxy sharing inside Settings, Airtel & Mobitel filters, Android 6.0+ (`minSdk 23`) support, and built-in GitHub auto-update.
+- **True In-App Auto-Update & Installer:** Automatically detects new GitHub releases without stale CDN caching, selects the smallest APK for your device CPU (`arm64-v8a` / `armeabi-v7a` / `universal`), downloads inside the app with live percentage & MB progress, and launches the Android package installer directly.
+- **Settings About Tab & Telegram Links:** Added an **About** tab above **Build Version & Updates** with clickable links for **@MetroVpnPaidProof** (Channel) and **@Metrodens_bot** (Bot), plus an **Auto-Update Check** toggle.
+- **Material 3 Expressive + Slide-Right Data Quota:** Shape-morphing 12-scallop hero toggle, Hotspot Share in Settings, swipe right on server cards for Data Quota, compact QR camera + Gallery upload, and Android 6.0+ (`minSdk 23`) support.
 
 ---
 
