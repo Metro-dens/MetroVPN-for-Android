@@ -1,8 +1,8 @@
 {
-  "versionCode": 8,
-  "versionName": "1.3.4",
+  "versionCode": 9,
+  "versionName": "1.3.5",
   "title": "New Update Available",
-  "message": "Fixed Data Quota syncing over active VPN tunnels and IP/VCN server nodes, plus automatic quota refresh after connecting.",
+  "message": "Ookla/Fast-grade 4-stream parallel Speed Test with real HTTP POST upload benchmark, loaded latency & packet loss metrics, calibrated 270-degree non-linear speedometer dial, and cancellable in-app updater.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVPN-for-Android/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }
