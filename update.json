@@ -1,8 +1,8 @@
 {
-  "versionCode": 4,
-  "versionName": "1.3.0",
+  "versionCode": 5,
+  "versionName": "1.3.1",
   "title": "New Update Available",
-  "message": "Material 3 Expressive Pixel UI, Hotspot Share in Settings, Slide-Right Data Quota view, and Android 6-15 support.",
+  "message": "Added Settings About tab with @MetroVpnPaidProof channel & @Metrodens_bot Telegram links, plus compact QR scanner & Slide-Right Data Quota.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVpnApp/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }
