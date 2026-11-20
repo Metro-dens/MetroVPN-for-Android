@@ -25,15 +25,6 @@ Go to the **[Latest Release (v1.3.3)](https://github.com/Metro-dens/MetroVpnApp/
 
 ---
 
-## 💻 Download Windows Desktop (`win-v1.3.3`)
-
-Go to the **[Windows Release (win-v1.3.3)](https://github.com/Metro-dens/MetroVpnApp/releases/tag/win-v1.3.3)** (Windows 10 / 11 x64, .NET 8 Desktop Runtime):
-
-- **MetroVPN-win-x64.zip** (~24.0 MB — Recommended full bundle including MetroVPN.exe + core/xray.exe + wintun.dll)
-- Material 3 Expressive tablet-locked UI (1040x720), Hotspot/LAN proxy share, Data Quota sync, Speed diagnostics studio, Airtel & Mobitel filters, Settings About Telegram links, and built-in in-app Auto-Update.
-
----
-
 ## 🛡️ Install Guide (Play Protect)
 
 When installing directly outside the Play Store, Android may show a prompt before installing:
@@ -47,4 +38,3 @@ When installing directly outside the Play Store, Android may show a prompt befor
 - Bot & VIP Plans: **[@Metrodens_bot](https://t.me/Metrodens_bot)**
 - Updates & Notices: **[@METRODENSVPN](https://t.me/METRODENSVPN)**
 - Speed Proofs: **[@MetroVpnPaidProof](https://t.me/MetroVpnPaidProof)**
-
