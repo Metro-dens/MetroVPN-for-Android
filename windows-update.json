@@ -1,0 +1,7 @@
+{
+  "versionName": "1.3.3",
+  "title": "MetroVPN Windows v1.3.3",
+  "message": "Material 3 Expressive Desktop UI (locked tablet size 1040x720), removed subscription UI, Hotspot LAN Share, full Xray Settings (Strict VCN / TLS Frag / Standard, DNS, MTU, IPv6), independent Material You & Light/Dark themes, Data Quota inspector, Airtel & Mobitel filters, About tab (@MetroVpnPaidProof & @Metrodens_bot), and in-app Auto-Update.",
+  "downloadUrl": "https://github.com/Metro-dens/MetroVpnApp/releases/download/win-v1.3.3/MetroVPN-win-x64.zip",
+  "mandatory": false
+}
