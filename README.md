@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.6`)
+## 📱 Download APK (`v1.3.7`)
 
-Go to the **[Latest Release (v1.3.6)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.6)** and pick the APK for your Android device (**Android 6.0+**):
+Go to the **[Latest Release (v1.3.7)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.7)** and pick the APK for your Android device (**Android 6.0+**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,7 +16,17 @@ Go to the **[Latest Release (v1.3.6)](https://github.com/Metro-dens/MetroVPN-for
 
 ---
 
-## ✨ What's New in `v1.3.6`
+## ✨ What's New in `v1.3.7`
+
+- **Security Hardening & Vulnerability Audit Fixes:**
+  - Verified downloaded update APK package ID, monotonic `versionCode`, and signing certificate SHA-256 against the installed app, plus HTTPS GitHub-only allowlist for update URLs and redirects.
+  - Encrypted saved VPN profiles (`profiles_json`) at rest with Android Keystore AES-256-GCM (auto-migrating existing profiles) and added Android 12+ `dataExtractionRules` / `fullBackupContent` backup exclusions.
+  - Fixed Android 6.0/7.0 (`minSdk 23`) crashes (`Base64` & `contentLengthLong` `[NewApi]` Lint errors resolved to 0 errors).
+  - Hardened Hotspot PAC HTTP server against JS injection and header/thread DoS, blocked SSRF private/loopback/metadata IPs & redirects in quota lookups, and redacted UUIDs/keys from in-app logs.
+
+---
+
+## ✨ Previously in `v1.3.6`
 
 - **Redesigned Glowing Wavy Speedometer & Scalloped Medallion UI:** 12-lobe Material 3 Expressive scalloped medallion, glowing 28-cycle flowing sine-wave arc (`0 → 500 Mbps` logarithmic scale) with 6° split-gap inactive track, leading tip dot, active-phase metric card highlights, and live **Test Data Cost** breakdown (`↓ MB · ↑ MB`).
 - **Ookla / Fast.com-Grade Multi-Stream Speed Test:** 8-sample unloaded ping, RFC 3550 jitter, and packet loss % probes, 4-stream parallel download saturation with trimmed outlier filtering and concurrent **Loaded Ping** measurement, plus 3-stream real HTTP `POST` upload throughput testing.
