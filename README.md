@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.7`)
+## 📱 Download APK (`v1.3.8`)
 
-Go to the **[Latest Release (v1.3.7)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.7)** and pick the APK for your Android device (**Android 6.0+**):
+Go to the **[Latest Release (v1.3.8)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.8)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,7 +16,18 @@ Go to the **[Latest Release (v1.3.7)](https://github.com/Metro-dens/MetroVPN-for
 
 ---
 
-## ✨ What's New in `v1.3.7`
+## ✨ What's New in `v1.3.8`
+
+- **Hotspot Share & Android TV 11 Fixes:**
+  - Fixed HTTP proxy half-close stalls (`uplinkOnly: 2`, `downlinkOnly: 5`, `handshake: 8`, `connIdle: 300`) that caused Android TV Wi-Fi Manual Proxy to hang on "Connecting...".
+  - Fixed SOCKS5 UDP relay (`socks-in` now binds and advertises the real Hotspot LAN IP instead of `127.0.0.1`) so full-tunnel UDP/DNS/QUIC works on Android TV via SOCKS5 (`:10808`).
+  - Switched Xray routing `domainStrategy` to `AsIs` and removed `; DIRECT` PAC fallback to eliminate carrier DNS stalls and silent fallback onto normal Mobile SIM data.
+  - Added instant Hotspot Gateway IP auto-detection (excluding cellular/IMS/P2P interfaces like `pdp0`, `seth_lte0`, `epdg0`, `p2p-wlan0-0`), serialized FGS-safe Hotspot proxy restarts, Android 13+ LAN `excludeRoute`, and live **`PROXY READY`** status verification in Settings.
+  - Added native **Android TV** launcher & feature compatibility (`LEANBACK_LAUNCHER`, non-required touchscreen) plus an in-app **Android TV Setup (Stop SIM Data Leak)** guide.
+
+---
+
+## ✨ Previously in `v1.3.7`
 
 - **Security Hardening & Vulnerability Audit Fixes:**
   - Verified downloaded update APK package ID, monotonic `versionCode`, and signing certificate SHA-256 against the installed app, plus HTTPS GitHub-only allowlist for update URLs and redirects.
