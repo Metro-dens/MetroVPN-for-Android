@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.5`)
+## 📱 Download APK (`v1.3.6`)
 
-Go to the **[Latest Release (v1.3.5)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.5)** and pick the APK for your Android device (**Android 6.0+**):
+Go to the **[Latest Release (v1.3.6)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.6)** and pick the APK for your Android device (**Android 6.0+**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,10 +16,10 @@ Go to the **[Latest Release (v1.3.5)](https://github.com/Metro-dens/MetroVPN-for
 
 ---
 
-## ✨ What's New in `v1.3.5`
+## ✨ What's New in `v1.3.6`
 
+- **Redesigned Glowing Wavy Speedometer & Scalloped Medallion UI:** 12-lobe Material 3 Expressive scalloped medallion, glowing 28-cycle flowing sine-wave arc (`0 → 500 Mbps` logarithmic scale) with 6° split-gap inactive track, leading tip dot, active-phase metric card highlights, and live **Test Data Cost** breakdown (`↓ MB · ↑ MB`).
 - **Ookla / Fast.com-Grade Multi-Stream Speed Test:** 8-sample unloaded ping, RFC 3550 jitter, and packet loss % probes, 4-stream parallel download saturation with trimmed outlier filtering and concurrent **Loaded Ping** measurement, plus 3-stream real HTTP `POST` upload throughput testing.
-- **Calibrated 270° Non-Linear Speedometer UI:** Precision 270° radial dial (`0, 1, 5, 10, 20, 30, 50, 100, 250, 500, 1G` Mbps) with tapered needle pointer, peak-hold marker, phase pill bar (`PING` / `DOWNLOAD` / `UPLOAD`), and instant **Stop Test** cancellation.
 - **Data Quota Sync Fix & Auto-Refresh:** Fixed Data Quota syncing over active VPN tunnels (via proxy/direct fallback) and IP/VCN server nodes, plus automatic quota refresh right after connecting.
 - **Cancellable In-App Auto-Update & Installer:** Proxy-aware in-app APK downloader with live progress bar, **Cancel**, and **Browser** fallback controls.
 - **Xiaomi MIUI / HyperOS & Android 13+ Haptics Fix:** Added `FLAG_IGNORE_GLOBAL_SETTING`, `VibrationAttributes.USAGE_TOUCH` (Android 13+), and `AudioAttributes.USAGE_ASSISTANCE_SONIFICATION` (Android 8–12) plus full haptic triggers across hero toggle, Settings rows, switches, navigation bar, and server swipe cards.

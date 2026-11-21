@@ -1,8 +1,8 @@
 {
-  "versionCode": 9,
-  "versionName": "1.3.5",
+  "versionCode": 10,
+  "versionName": "1.3.6",
   "title": "New Update Available",
-  "message": "Ookla/Fast-grade 4-stream parallel Speed Test with real HTTP POST upload benchmark, loaded latency & packet loss metrics, calibrated 270-degree non-linear speedometer dial, and cancellable in-app updater.",
+  "message": "Upgraded Speed Test UI with 12-lobe scalloped medallion, glowing 28-cycle wavy arc gauge, logarithmic 0-500 Mbps scale, active-phase metric highlights, and live Test Data Cost breakdown.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVPN-for-Android/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }
