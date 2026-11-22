@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.8`)
+## 📱 Download APK (`v1.3.9`)
 
-Go to the **[Latest Release (v1.3.8)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.8)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
+Go to the **[Latest Release (v1.3.9)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.9)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,7 +16,15 @@ Go to the **[Latest Release (v1.3.8)](https://github.com/Metro-dens/MetroVPN-for
 
 ---
 
-## ✨ What's New in `v1.3.8`
+## ✨ What's New in `v1.3.9`
+
+- **Universal Haptics on Every Android Device:** Switched hardware vibrator pulses to `USAGE_MEDIA` with multi-motor `VibratorManager` fallback and full ERM/LRA drive amplitude so tactile haptics fire reliably across Samsung, Xiaomi MIUI/HyperOS, Oppo/Realme, Vivo, Motorola, and Pixel even when system Touch Feedback is off.
+- **VLESS TLS SNI Auto-Verification Fix:** Automatically populates `verifyPeerCertByName` (`address,sni`) for domain-based VLESS TLS links that use spoofed ISP SNIs (`sni=st1.zoom.us`) without an explicit `&vcn=` parameter, fixing TLS handshake failures.
+- **Full Multi-Protocol & Multi-Transport Support:** Added support for **VMess (`vmess://`)**, **Trojan (`trojan://`)**, and **Shadowsocks (`ss://`)** alongside **VLESS (`vless://`)**, plus **TCP+HTTP, WebSocket, gRPC, XHTTP, SplitHTTP, HTTPUpgrade, H2, mKCP, and QUIC**.
+
+---
+
+## ✨ Previously in `v1.3.8`
 
 - **Hotspot Share & Android TV 11 Fixes:**
   - Fixed HTTP proxy half-close stalls (`uplinkOnly: 2`, `downlinkOnly: 5`, `handshake: 8`, `connIdle: 300`) that caused Android TV Wi-Fi Manual Proxy to hang on "Connecting...".

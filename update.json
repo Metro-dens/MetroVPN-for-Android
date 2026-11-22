@@ -1,8 +1,8 @@
 {
-  "versionCode": 12,
-  "versionName": "1.3.8",
-  "title": "Hotspot Share & Android TV Fix",
-  "message": "Fixed Hotspot Share proxy stalls & SOCKS5 UDP relay, added instant SoftAP Gateway IP auto-detection, live PROXY READY status, AsIs routing (no carrier DNS leak), and native Android TV 11 support.",
+  "versionCode": 13,
+  "versionName": "1.3.9",
+  "title": "Universal Haptics & Multi-Type Engine",
+  "message": "Fixed haptics across all Android devices (even with Touch Feedback disabled), fixed TLS SNI domain certificate matching for VLESS links without explicit vcn, and added full support for VMess, Trojan, Shadowsocks, gRPC, XHTTP, SplitHTTP, HTTPUpgrade, H2, KCP, QUIC & TCP-HTTP.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVPN-for-Android/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }
