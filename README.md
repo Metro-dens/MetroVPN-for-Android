@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.3.9`)
+## 📱 Download APK (`v1.4.0`)
 
-Go to the **[Latest Release (v1.3.9)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.3.9)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
+Go to the **[Latest Release (v1.4.0)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.0)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,7 +16,13 @@ Go to the **[Latest Release (v1.3.9)](https://github.com/Metro-dens/MetroVPN-for
 
 ---
 
-## ✨ What's New in `v1.3.9`
+## ✨ What's New in `v1.4.0`
+
+- **Video Call Camera Conflict Fix:** Fixed a CameraX lifecycle leak where opening/closing the QR scanner kept the device camera locked to `MainActivity` until the MetroVPN app was closed. MetroVPN now immediately unbinds CameraX on scan, dialog close, `onPause`, and `onStop`, and detects active video-call cameras (`CameraManager.AvailabilityCallback`) so ongoing video calls never get blocked.
+
+---
+
+## ✨ Previously in `v1.3.9`
 
 - **Universal Haptics on Every Android Device:** Switched hardware vibrator pulses to `USAGE_MEDIA` with multi-motor `VibratorManager` fallback and full ERM/LRA drive amplitude so tactile haptics fire reliably across Samsung, Xiaomi MIUI/HyperOS, Oppo/Realme, Vivo, Motorola, and Pixel even when system Touch Feedback is off.
 - **VLESS TLS SNI Auto-Verification Fix:** Automatically populates `verifyPeerCertByName` (`address,sni`) for domain-based VLESS TLS links that use spoofed ISP SNIs (`sni=st1.zoom.us`) without an explicit `&vcn=` parameter, fixing TLS handshake failures.
