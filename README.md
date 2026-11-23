@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.4.0`)
+## 📱 Download APK (`v1.4.1`)
 
-Go to the **[Latest Release (v1.4.0)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.0)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
+Go to the **[Latest Release (v1.4.1)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.1)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,7 +16,18 @@ Go to the **[Latest Release (v1.4.0)](https://github.com/Metro-dens/MetroVPN-for
 
 ---
 
-## ✨ What's New in `v1.4.0`
+## ✨ What's New in `v1.4.1`
+
+- **High-Speed Multi-Connection Speed Test Engine (Matches Ookla & Fast.com):**
+  - **8x Parallel Download / 6x Parallel Upload Streams:** Upgraded from 4/3 streams (and removed the slow European `proof.ovh.net` fallback) to 8 independent Cloudflare 50 MB download streams (7s) and 6 independent 16 MB upload streams (6s) with raised `http.maxConnections=16`.
+  - **Per-Worker TCP Socket Isolation:** Gives each download/upload worker an isolated verifier instance so Android's internal HTTP/2 connection pool never collapses all 8 workers onto a single TCP congestion window.
+  - **16 MB Streaming Upload (No Per-Chunk Flush Bottleneck):** Replaced tiny 512 KB POSTs + 16 KB `out.flush()` stalls with 16 MB streaming POSTs (`128 KB` chunks) and 256 KB kernel send-buffer prefill skip.
+  - **Warm Keep-Alive Ping & Outlier-Filtered Jitter:** Runs 2 discarded warm-up requests + 10 warm keep-alive RTT probes (without tearing down the TLS socket between probes), reporting 25th-percentile ping and spike-filtered jitter.
+  - **Ookla/Fast.com Steady-State Trimming & 0–1000+ Mbps Gauge:** Discards the first 1.5s TCP slow-start ramp, trims bottom 30% / top 5% on download (bottom 25% / top 10% on upload), and expands the nonlinear speedometer arc to `0 → 1000+ Mbps`.
+
+---
+
+## ✨ Previously in `v1.4.0`
 
 - **Video Call Camera Conflict Fix:** Fixed a CameraX lifecycle leak where opening/closing the QR scanner kept the device camera locked to `MainActivity` until the MetroVPN app was closed. MetroVPN now immediately unbinds CameraX on scan, dialog close, `onPause`, and `onStop`, and detects active video-call cameras (`CameraManager.AvailabilityCallback`) so ongoing video calls never get blocked.
 
