@@ -1,8 +1,8 @@
 {
   "versionCode": 15,
   "versionName": "1.4.1",
-  "title": "High-Speed Multi-Connection Speed Test Engine",
-  "message": "Upgraded the built-in speed test to 8 parallel isolated TCP download streams (7s) and 6 parallel 16 MB upload streams (6s) with warm keep-alive ping/jitter, 1.5s slow-start warmup discard, Ookla/Fast.com steady-state trimming, and a 0–1000+ Mbps gauge curve.",
+  "title": "Speed Test Upload, VPN Lifecycle & Stability Update",
+  "message": "Fixed Speed Test upload accuracy (4x server-acknowledged HTTP/1.1 POST chunks with 1.3s warmup discard, 1s sliding window, and instant SO_LINGER socket abort), hardened Android 8+ VPN foreground lifecycle & error handling, improved Xray TLS Fragment/VMess/Shadowsocks/Hotspot routing, added share-to-import support, offloaded QR/Hotspot I/O off the main thread, and added live server switching and Open Source Licenses.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVPN-for-Android/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }

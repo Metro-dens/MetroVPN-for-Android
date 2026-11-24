@@ -18,12 +18,19 @@ Go to the **[Latest Release (v1.4.1)](https://github.com/Metro-dens/MetroVPN-for
 
 ## ✨ What's New in `v1.4.1`
 
-- **High-Speed Multi-Connection Speed Test Engine (Matches Ookla & Fast.com):**
-  - **8x Parallel Download / 6x Parallel Upload Streams:** Upgraded from 4/3 streams (and removed the slow European `proof.ovh.net` fallback) to 8 independent Cloudflare 50 MB download streams (7s) and 6 independent 16 MB upload streams (6s) with raised `http.maxConnections=16`.
-  - **Per-Worker TCP Socket Isolation:** Gives each download/upload worker an isolated verifier instance so Android's internal HTTP/2 connection pool never collapses all 8 workers onto a single TCP congestion window.
-  - **16 MB Streaming Upload (No Per-Chunk Flush Bottleneck):** Replaced tiny 512 KB POSTs + 16 KB `out.flush()` stalls with 16 MB streaming POSTs (`128 KB` chunks) and 256 KB kernel send-buffer prefill skip.
-  - **Warm Keep-Alive Ping & Outlier-Filtered Jitter:** Runs 2 discarded warm-up requests + 10 warm keep-alive RTT probes (without tearing down the TLS socket between probes), reporting 25th-percentile ping and spike-filtered jitter.
-  - **Ookla/Fast.com Steady-State Trimming & 0–1000+ Mbps Gauge:** Discards the first 1.5s TCP slow-start ramp, trims bottom 30% / top 5% on download (bottom 25% / top 10% on upload), and expands the nonlinear speedometer arc to `0 → 1000+ Mbps`.
+- **Accurate Speed Test Upload & High-Speed Download Engine:**
+  - **4x Server-Acknowledged HTTP/1.1 Upload:** Uses 4 parallel HTTP/1.1 POST chunk streams (128 KB initial, adaptive up to 1 MB) and counts bytes strictly after `200 OK` server acknowledgement, discarding the first 1.3s warm-up window, driving the live gauge via a 1s sliding window, and computing final Upload Mbps from steady-state confirmed bytes / duration.
+  - **Instant Socket Cleanup & Idle Battery Fix:** Immediately aborts all active sockets with `SO_LINGER(true, 0)` on completion, Stop, or ViewModel teardown, cleans up `SSLSocket` on TLS handshake/hostname verification failures, and stops the idle 60fps `withFrameMillis` loop when the gauge is idle.
+  - **8x Parallel Download & Warm Keep-Alive Ping/Jitter:** Keeps 8 isolated TCP download streams, warm keep-alive latency/jitter probes, and a 0–1000+ Mbps gauge curve.
+- **Android 8+ VPN Service & Error Lifecycle Hardening:**
+  - Synchronously satisfies `startForegroundService()` on `ACTION_RESTART_HOTSPOT` and null-profile `ACTION_START` before stopping, displays `"MetroVPN Connecting…"` while handshaking, clears active profile/foreground state on stop, preserves `VpnStatus.ERROR` across failed tunnel `onDestroy()`, and splits UI banner vs VPN error snackbars so stale VPN errors never shadow app snackbars.
+- **Xray Routing, Delay Tests & Multi-Protocol Fixes:**
+  - Passes active `MetroSettings` into delay tests and merges ping/speed-test latencies atomically; restricts `tlshello` fragment outbound/`dialerProxy` to TCP TLS/Reality profiles (skipping Shadowsocks and UDP `kcp`/`quic`); sanitizes comma/wildcard VCN before HTTP `Host` headers; enforces RFC1918 direct rules whenever Hotspot Sharing is enabled; defaults VMess TLS SNI to single host when blank; URL-decodes Shadowsocks `method%3Apassword` credentials; live-reconnects VPN when tunnel settings change; stops VPN if the active profile is deleted; and clears stale update APK paths if signature verification rejects them.
+- **QR, Share-to-Import, Updater, Storage & UI Polish:**
+  - Synchronizes ZXing `MultiFormatReader`, downscales QR bitmaps > 1440px, and offloads gallery QR decoding to `Dispatchers.IO` with bitmap recycling.
+  - Adds Android Share (`ACTION_SEND`) support for `.mv` files and config text plus `ClipData` URI permissions when sharing `.mv` files.
+  - Hardens `PacHttpServer` (`reuseAddress = true`, `finally` reset, exception isolation), `AppUpdateChecker` (requires real `.apk` asset, Android TV safe installer launch, validated redirects), and `ProfileStorage` (self-healing invalidated AndroidKeyStore keys).
+  - Offloads Hotspot IP scanning off the Main Thread, adds direct one-tap server switching on HomeScreen (`Active: <server> • Tap to switch to <selected>`), fixes protocol/import/Google DNS (`8.8.8.8`) labels and empty-filter tap-to-clear on ServersScreen, skips redundant `NO_PROXY` quota passes after clean VPN responses, and adds an **Open Source Licenses** notice in **Settings → About**.
 
 ---
 
