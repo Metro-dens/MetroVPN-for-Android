@@ -4,9 +4,9 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.4.1`)
+## 📱 Download APK (`v1.4.2`)
 
-Go to the **[Latest Release (v1.4.1)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.1)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
+Go to the **[Latest Release (v1.4.2)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.2)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
@@ -16,7 +16,7 @@ Go to the **[Latest Release (v1.4.1)](https://github.com/Metro-dens/MetroVPN-for
 
 ---
 
-## ✨ What's New in `v1.4.1`
+## ✨ What's New in `v1.4.2`
 
 - **Accurate Speed Test Upload & High-Speed Download Engine:**
   - **4x Server-Acknowledged HTTP/1.1 Upload:** Uses 4 parallel HTTP/1.1 POST chunk streams (128 KB initial, adaptive up to 1 MB) and counts bytes strictly after `200 OK` server acknowledgement, discarding the first 1.3s warm-up window, driving the live gauge via a 1s sliding window, and computing final Upload Mbps from steady-state confirmed bytes / duration.
@@ -31,6 +31,12 @@ Go to the **[Latest Release (v1.4.1)](https://github.com/Metro-dens/MetroVPN-for
   - Adds Android Share (`ACTION_SEND`) support for `.mv` files and config text plus `ClipData` URI permissions when sharing `.mv` files.
   - Hardens `PacHttpServer` (`reuseAddress = true`, `finally` reset, exception isolation), `AppUpdateChecker` (requires real `.apk` asset, Android TV safe installer launch, validated redirects), and `ProfileStorage` (self-healing invalidated AndroidKeyStore keys).
   - Offloads Hotspot IP scanning off the Main Thread, adds direct one-tap server switching on HomeScreen (`Active: <server> • Tap to switch to <selected>`), fixes protocol/import/Google DNS (`8.8.8.8`) labels and empty-filter tap-to-clear on ServersScreen, skips redundant `NO_PROXY` quota passes after clean VPN responses, and adds an **Open Source Licenses** notice in **Settings → About**.
+
+---
+
+## ✨ Previously in `v1.4.1`
+
+- **High-Speed Multi-Connection Speed Test Engine:** Upgraded to 8 parallel isolated TCP download streams with warm keep-alive ping/jitter, 1.5s slow-start warmup discard, steady-state trimming, and a `0 → 1000+ Mbps` gauge curve.
 
 ---
 
