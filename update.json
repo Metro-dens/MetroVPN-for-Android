@@ -1,8 +1,8 @@
 {
-  "versionCode": 16,
-  "versionName": "1.4.2",
-  "title": "Speed Test Upload, VPN Lifecycle & Stability Update",
-  "message": "Fixed Speed Test upload accuracy (4x server-acknowledged HTTP/1.1 POST chunks with 1.3s warmup discard, 1s sliding window, and instant SO_LINGER socket abort), hardened Android 8+ VPN foreground lifecycle & error handling, improved Xray TLS Fragment/VMess/Shadowsocks/Hotspot routing, added share-to-import support, offloaded QR/Hotspot I/O off the main thread, and added live server switching and Open Source Licenses.",
+  "versionCode": 17,
+  "versionName": "1.4.3",
+  "title": "Auto-Switch Configs, Copy URL & Performance Update",
+  "message": "Tapping another server config while connected now automatically disconnects and reconnects to the new config seamlessly, added Copy URL to the Servers tab config menu, reduced idle battery/CPU usage by pausing offscreen/idle animations and background timers, offloaded QR generation off the main thread, bounded bulk ping concurrency, and parallelized update checks.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVPN-for-Android/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }

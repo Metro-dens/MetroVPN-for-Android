@@ -4,19 +4,30 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.4.2`)
+## 📱 Download APK (`v1.4.3`)
 
-Go to the **[Latest Release (v1.4.2)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.2)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
+Go to the **[Latest Release (v1.4.3)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.3)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
 | **Most Android Phones (2018–2026) — Recommended** | `app-arm64-v8a-release.apk` | ~15.8 MB |
 | **Older / Budget 32-bit Android Phones** | `app-armeabi-v7a-release.apk` | ~16.4 MB |
-| **Not sure which phone you have?** | `app-universal-release.apk` | ~27.5 MB |
+| **Not sure which phone you have?** | `app-universal-release.apk` | ~27.6 MB |
 
 ---
 
-## ✨ What's New in `v1.4.2`
+## ✨ What's New in `v1.4.3`
+
+- **One-Tap Automatic Config Switching:** Tapping another server config in the **Servers** tab while connected (or connecting) now automatically disconnects the current tunnel and reconnects to the newly selected config—no manual disconnect needed. Hardened `MetroVpnService` with clean TUN/port teardown and cancellation guards for rapid switching.
+- **Copy URL in Servers Tab:** Added a **Copy URL** action (alongside crisp Material 3 icons for every menu item) in each server node's overflow (`⋮`) menu to copy `vless://`, `vmess://`, `trojan://`, or `ss://` links directly to the clipboard, with proper VMess Base64 JSON, IPv6 bracketing, and `%20` fragment encoding on canonical rebuilds.
+- **Battery, CPU & Reliability Optimizations:**
+  - Stopped idle 60fps animations on the Home hero toggle and status dot when inactive, reused `Path` objects, and deferred Servers wavy-bar phase reads to the Canvas draw phase so server cards no longer recompose at 60fps.
+  - Paused the Home session timer and Settings hotspot IP polling automatically when backgrounded (`repeatOnLifecycle`).
+  - Offloaded 640×640 QR code bitmap generation off the Main Thread, bounded bulk ping concurrency to 4 concurrent probes (`Semaphore(4)`), parallelized GitHub/manifest update checks, switched `MetroLogStore` to O(1) `ArrayDeque` with keyed `LazyColumn` rows, made config imports atomic, and cleaned orphan starred IDs on profile deletion.
+
+---
+
+## ✨ Previously in `v1.4.2`
 
 - **Accurate Speed Test Upload & High-Speed Download Engine:**
   - **4x Server-Acknowledged HTTP/1.1 Upload:** Uses 4 parallel HTTP/1.1 POST chunk streams (128 KB initial, adaptive up to 1 MB) and counts bytes strictly after `200 OK` server acknowledgement, discarding the first 1.3s warm-up window, driving the live gauge via a 1s sliding window, and computing final Upload Mbps from steady-state confirmed bytes / duration.
