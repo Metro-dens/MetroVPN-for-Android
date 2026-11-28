@@ -1,8 +1,8 @@
 {
-  "versionCode": 17,
-  "versionName": "1.4.3",
-  "title": "Auto-Switch Configs, Copy URL & Performance Update",
-  "message": "Tapping another server config while connected now automatically disconnects and reconnects to the new config seamlessly, added Copy URL to the Servers tab config menu, reduced idle battery/CPU usage by pausing offscreen/idle animations and background timers, offloaded QR generation off the main thread, bounded bulk ping concurrency, and parallelized update checks.",
+  "versionCode": 18,
+  "versionName": "1.4.4",
+  "title": "MetroAI Assistant (Gemini API) Update",
+  "message": "Added the built-in MetroAI Assistant powered by the Gemini API (gemini-3.8-flash & gemini-3.5-flash-lite): one-tap Xray log diagnostics, Speed Test bufferbloat/throughput insights, smart server & settings advisor with one-tap Apply Settings / Switch Server actions, encrypted AndroidKeyStore bring-your-own API key storage, and strict privacy redaction.",
   "downloadUrl": "https://github.com/Metro-dens/MetroVPN-for-Android/releases/latest/download/app-universal-release.apk",
   "mandatory": false
 }

@@ -4,19 +4,29 @@ Official release hub for **MetroVPN** (`site.metrodens.vpn`) — fast, battery-f
 
 ---
 
-## 📱 Download APK (`v1.4.3`)
+## 📱 Download APK (`v1.4.4`)
 
-Go to the **[Latest Release (v1.4.3)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.3)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
+Go to the **[Latest Release (v1.4.4)](https://github.com/Metro-dens/MetroVPN-for-Android/releases/tag/v1.4.4)** and pick the APK for your Android device (**Android 6.0+ & Android TV**):
 
 | Phone Type | File to Download | Size |
 |---|---|---|
-| **Most Android Phones (2018–2026) — Recommended** | `app-arm64-v8a-release.apk` | ~15.8 MB |
-| **Older / Budget 32-bit Android Phones** | `app-armeabi-v7a-release.apk` | ~16.4 MB |
+| **Most Android Phones (2018–2026) — Recommended** | `app-arm64-v8a-release.apk` | ~15.9 MB |
+| **Older / Budget 32-bit Android Phones** | `app-armeabi-v7a-release.apk` | ~16.5 MB |
 | **Not sure which phone you have?** | `app-universal-release.apk` | ~27.6 MB |
 
 ---
 
-## ✨ What's New in `v1.4.3`
+## ✨ What's New in `v1.4.4`
+
+- **MetroAI Assistant (Gemini API):**
+  - Built-in VPN network engineer powered by Google Gemini (`gemini-3.8-flash` & `gemini-3.5-flash-lite`) with zero added SDK bloat (+26 KB total).
+  - **One-Tap Entry Points:** **Ask AI** in Xray Diagnostic Logs, **AI Insights** on the Speed Test tab, **AI Pick** in the Servers tab, and **Settings → Gemini AI** for full assistant & custom Q&A.
+  - **Actionable One-Tap Fixes:** Directly apply validated settings recommendations (MTU, DNS, TLS Fragment, Strict VCN, Bypass LAN, IPv6) or switch to the recommended server from the MetroAI card.
+  - **Bring-Your-Own Encrypted Key & Privacy Shield:** Your Google AI Studio key is encrypted locally with **AndroidKeyStore (AES-256-GCM)**, sent strictly via HTTPS `x-goog-api-key` headers, and works through the active VPN proxy; UUIDs, passwords, raw config URIs, and API keys are never sent.
+
+---
+
+## ✨ Previously in `v1.4.3`
 
 - **One-Tap Automatic Config Switching:** Tapping another server config in the **Servers** tab while connected (or connecting) now automatically disconnects the current tunnel and reconnects to the newly selected config—no manual disconnect needed. Hardened `MetroVpnService` with clean TUN/port teardown and cancellation guards for rapid switching.
 - **Copy URL in Servers Tab:** Added a **Copy URL** action (alongside crisp Material 3 icons for every menu item) in each server node's overflow (`⋮`) menu to copy `vless://`, `vmess://`, `trojan://`, or `ss://` links directly to the clipboard, with proper VMess Base64 JSON, IPv6 bracketing, and `%20` fragment encoding on canonical rebuilds.
